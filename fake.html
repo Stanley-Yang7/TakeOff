@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Fx学生服务平台</title>
+</head>
+<script>
+    let now = new Date();
+    let year = now.getFullYear() + '/';
+    let month = now.getMonth()+1;
+    let date1 = now.getDate();
+    let date2 = now.getDate();
+    let hour1 = now.getHours();
+    let hour2 = now.getHours()+2;
+    let min = now.getMinutes();
+    let sec = now.getSeconds();
+    if(hour1<0)
+    {
+        hour1=hour1+24;
+        date1=date1-1;
+    }
+    if(hour2>24)
+    {
+        hour2=hour2-24;
+        date2=date2+1;
+    }
+    if(min<10)
+    {
+        min = '0' + min;
+    }
+    if(sec<10)
+    {
+        sec = '0' + sec;
+    }
+    let timer1 = year + month+'/' + date1 + ' '+ hour1 +':00:00';
+    let timer2 = year + month+'/' + date2 + ' '+ hour2 +':00:00';
+    let timer3 = hour1 + ':' + min;
+    let timer4 = year + month + '/' + date1 + ' '+' '+hour1+':' + min +':'+sec; 
+</script>
+<style>
+    @font-face 
+    {
+   font-family: mFont;
+   src: url('小米兰亭加粗.ttf');
+    }
+    body{ font-family:"mFont"}
+
+    .time1
+    {
+        font-size:36px;
+        position: relative;
+        left: 40px;
+        top: 22px;
+        background-color:#ededed;
+        width: 100px;
+    }
+    .time2
+    {
+        font-size:30px;
+        position: relative;
+        top: 1170px;
+        height: 70px;
+        background-color:#ededed;
+        text-align: center;
+        color:#888888;
+    }
+    .stuNum
+    {
+        font-size:45px;
+        position: relative;
+        top: 1278px;
+        left: 330px;
+        height: 50px;
+        width: 300px;
+        color:#5a6b90;
+        background-color:#ffffff;
+    }
+    .name
+    {
+        font-size:45px;
+        position: relative;
+        top: 1296px;
+        left: 330px;
+        height: 52px;
+        width: 300px;
+        background-color:#ffffff;
+    }
+    .tel
+    {
+        font-size:45px;
+        position: relative;
+        top: 1375px;
+        left: 330px;
+        height: 50px;
+        width: 300px;
+        color:#5a6b90;
+        background-color:#ffffff;
+    }
+    .dom
+    {
+        font-size:45px;
+        position: relative;
+        top: 1394px;
+        left: 330px;
+        height: 50px;
+        width: 500px;
+        background-color:#ffffff;
+    }
+    .time3
+    {
+        font-size:45px;
+        position: relative;
+        top: 1804px;
+        left: 203px;
+        height: 50px;
+        width: 500px;
+        background-color:#ffffff;
+    }
+
+</style>
+
+<body>
+    <!-- <img src="fake.png" alt="#"> -->
+    <div style="background:url(realfake.png) no-repeat left top; width:1080px; height: 2400px;">
+        <div class="time1">
+            <script>
+                document.write(timer3);
+                </script>
+        </div>
+        <div class="time2">
+            <script>
+                document.write(timer3);
+                </script>
+        </div>
+        <div class="stuNum " contenteditable="true">
+            20192005057
+        </div>
+        <div class="name" contenteditable="true">
+            邓翔
+        </div>
+        <div class="tel" contenteditable="true">
+            15017013698
+        </div>
+        <div class="dom" contenteditable="true">
+            南海E座124
+        </div>
+        <div class="time3" contenteditable="true">
+            <script>
+                document.write(timer4);
+            </script>
+        </div>
+    </div>
+</div>
+</body>
+</html>
